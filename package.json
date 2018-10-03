@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "developmentalMilestones.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@types/node": "^10.11.0",
     "@types/papaparse": "^4.5.4",
     "papaparse": "^4.6.0",
-    "typescript": "^3.0.3"
-  },
-  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
     "typescript-tools": "^0.3.1"
   },
   "scripts": {
+    "parse-csv": "ts-node developmentalMilestones.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
