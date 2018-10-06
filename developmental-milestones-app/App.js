@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import * as data from './devMilestones.json';
 
 // consts from stove
 const { width, height } = Dimensions.get('screen');
-const gridSize = 5;
-const gridX = 5;
-const gridY = 11;
+const gridX = 5; // WHY 6
+const gridY = 12; // WHY 12?
 const grid = [...Array(gridX || 0)].map((v, i) => {
   return [...Array(gridY || 0)].map((v, i) => i);
 });
@@ -59,8 +59,15 @@ export default class App extends React.Component {
         {grid.map((col, x) => {
           return col.map((row, y) => {
             return (
-              <View style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}>
-                <Text>{`[${x},${y}]`}</Text>
+              <View
+                key={`[${x},${y}]`}
+                style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}
+              >
+                <Text>
+                  {`[${x},${y}]`}
+                  {JSON.stringify(data[x].category)}
+                  {JSON.stringify(data[x].milestones[y])}
+                </Text>
               </View>
             );
           });
