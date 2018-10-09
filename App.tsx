@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import styled from 'styled-components';
 import * as devData from './devMilestones.json';
+// import { Slide } from
 
 type Milestone = { age: number; description: string };
 type Category = {
@@ -12,8 +14,8 @@ const data: Category[] = devData as any;
 
 // consts from stove
 const { width, height } = Dimensions.get('screen');
-const gridX = 5; // WHY 6
-const gridY = 12; // WHY 12?
+const gridX = 5;
+const gridY = 12;
 const grid = [...Array(gridX || 0)].map((v, i) => {
   return [...Array(gridY || 0)].map((v, i) => i);
 });
@@ -76,6 +78,7 @@ export default class App extends React.Component {
                   {JSON.stringify(data[x].category)}
                   {JSON.stringify(data[x].milestones[y])}
                 </Text>
+                {/* <Slide /> */}
               </View>
             );
           });
