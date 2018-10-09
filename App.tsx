@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import * as devData from './devMilestones.json';
 // import { Slide } from
 
@@ -64,15 +64,13 @@ export default class App extends React.Component {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         directionalLockEnabled
-        pagingEnabled
-      >
+        pagingEnabled>
         {grid.map((col, x) => {
           return col.map((row, y) => {
             return (
               <View
                 key={`[${x},${y}]`}
-                style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}
-              >
+                style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}>
                 <Text>
                   {`[${x},${y}]`}
                   {JSON.stringify(data[x].category)}
