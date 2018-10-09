@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
 import * as data from './devMilestones.json';
 
