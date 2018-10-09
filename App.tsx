@@ -2,10 +2,13 @@ import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
 import * as devData from './devMilestones.json';
 
-const data: {
+type Milestone = { age: number; description: string };
+type Category = {
   category: string;
-  milestones: { age: number; description: string }[];
-}[] = devData as any;
+  milestones: Milestone[];
+};
+
+const data: Category[] = devData as any;
 
 // consts from stove
 const { width, height } = Dimensions.get('screen');
