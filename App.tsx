@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import * as devData from './devMilestones.json';
+import { Card } from './components/Card.js';
 // import { Slide } from
 
 type Milestone = { age: number; description: string };
@@ -51,12 +52,6 @@ const colorForTopic = (
   return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
 };
 
-// const Box = styled.view`
-//   background: #fff;
-//   height: 200px;
-//   width: 100px;
-// `;
-
 export default class App extends React.Component {
   render() {
     return (
@@ -73,17 +68,14 @@ export default class App extends React.Component {
         pagingEnabled>
         {grid.map((col, x) => {
           return col.map((row, y) => {
+            const text = `[${x},${y} - ${JSON.stringify(data[x].category)}${JSON.stringify(
+              data[x].milestones[y],
+            )}]`;
             return (
               <View
                 key={`[${x},${y}]`}
                 style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}>
-                {/* <Box> */}
-                <Text>
-                  {`[${x},${y}]`}
-                  {JSON.stringify(data[x].category)}
-                  {JSON.stringify(data[x].milestones[y])}
-                </Text>
-                {/* </Box> */}
+                <Card>{text}</Card>
               </View>
             );
           });
