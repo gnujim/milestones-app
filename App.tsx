@@ -6,6 +6,7 @@ import devData from './devMilestones.json';
 // import { Card } from './components/Card.js';
 import { colorForTopic } from './Utils';
 
+// this is type of cat
 type Category = {
   category: string;
   milestones: { age: number; description: string }[];
