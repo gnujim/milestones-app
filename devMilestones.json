@@ -3,76 +3,52 @@
     "category": "Gross Motor",
     "milestones": [
       {
-        "milestone": {
-          "age": "0",
-          "description": "Primitive reflexes - step, place, Moro, Babinski, ATNR \nFlexor posture"
-        }
+        "age": "0",
+        "description": "Primitive reflexes - step, place, Moro, Babinski, ATNR \nFlexor posture"
       },
       {
-        "milestone": {
-          "age": "2",
-          "description": "Head steady when held\nHead up 45 degrees prone"
-        }
+        "age": "2",
+        "description": "Head steady when held\nHead up 45 degrees prone"
       },
       {
-        "milestone": {
-          "age": "4",
-          "description": "Sits with support\nHead up 90 degrees prone, arms out\nRolls front -> back"
-        }
+        "age": "4",
+        "description": "Sits with support\nHead up 90 degrees prone, arms out\nRolls front -> back"
       },
       {
-        "milestone": {
-          "age": "6",
-          "description": "Postural reflexes\nSits tripod\nRolls both ways"
-        }
+        "age": "6",
+        "description": "Postural reflexes\nSits tripod\nRolls both ways"
       },
       {
-        "milestone": {
-          "age": "9",
-          "description": "Gets from all 4s -> sitting\nSits well with hands free\nPulls to stand\nCreeps on hands and knees"
-        }
+        "age": "9",
+        "description": "Gets from all 4s -> sitting\nSits well with hands free\nPulls to stand\nCreeps on hands and knees"
       },
       {
-        "milestone": {
-          "age": "12",
-          "description": "Walks a few steps \nWide-based gait\n"
-        }
+        "age": "12",
+        "description": "Walks a few steps \nWide-based gait\n"
       },
       {
-        "milestone": {
-          "age": "15",
-          "description": "Walks well"
-        }
+        "age": "15",
+        "description": "Walks well"
       },
       {
-        "milestone": {
-          "age": "18",
-          "description": "Stoops an recovers\nRuns"
-        }
+        "age": "18",
+        "description": "Stoops an recovers\nRuns"
       },
       {
-        "milestone": {
-          "age": "24",
-          "description": "Jumps on two feet\nUp & down stairs \"marking time\""
-        }
+        "age": "24",
+        "description": "Jumps on two feet\nUp & down stairs \"marking time\""
       },
       {
-        "milestone": {
-          "age": "36",
-          "description": "Pedals trike\nUp stairs alternating feet\n"
-        }
+        "age": "36",
+        "description": "Pedals trike\nUp stairs alternating feet\n"
       },
       {
-        "milestone": {
-          "age": "48",
-          "description": "Hops on one foot\nDown stairs alternating feet"
-        }
+        "age": "48",
+        "description": "Hops on one foot\nDown stairs alternating feet"
       },
       {
-        "milestone": {
-          "age": "60",
-          "description": "Balance on one foot 10 secs\nSkips\nMay learn to ride bicycle (if available)"
-        }
+        "age": "60",
+        "description": "Balance on one foot 10 secs\nSkips\nMay learn to ride bicycle (if available)"
       }
     ]
   },
@@ -80,76 +56,52 @@
     "category": "Fine Motor",
     "milestones": [
       {
-        "milestone": {
-          "age": "0",
-          "description": "Primitive reflexes - grasp"
-        }
+        "age": "0",
+        "description": "Primitive reflexes - grasp"
       },
       {
-        "milestone": {
-          "age": "2",
-          "description": "Hands open half of time\nBats at objects"
-        }
+        "age": "2",
+        "description": "Hands open half of time\nBats at objects"
       },
       {
-        "milestone": {
-          "age": "4",
-          "description": "Palmar grasp\nReaches and obtains items\nBrings objects to midline"
-        }
+        "age": "4",
+        "description": "Palmar grasp\nReaches and obtains items\nBrings objects to midline"
       },
       {
-        "milestone": {
-          "age": "6",
-          "description": "Raking grasp\nTransfers hand to hand\n"
-        }
+        "age": "6",
+        "description": "Raking grasp\nTransfers hand to hand\n"
       },
       {
-        "milestone": {
-          "age": "9",
-          "description": "Inferior pincer grasp\nPokes at objects"
-        }
+        "age": "9",
+        "description": "Inferior pincer grasp\nPokes at objects"
       },
       {
-        "milestone": {
-          "age": "12",
-          "description": "Fine pincer (fingertips)\nVoluntary release\nThrows objects\nFinger-feeds self cheerios"
-        }
+        "age": "12",
+        "description": "Fine pincer (fingertips)\nVoluntary release\nThrows objects\nFinger-feeds self cheerios"
       },
       {
-        "milestone": {
-          "age": "15",
-          "description": "Uses spoon, open top cup\nTower of 2 blocks"
-        }
+        "age": "15",
+        "description": "Uses spoon, open top cup\nTower of 2 blocks"
       },
       {
-        "milestone": {
-          "age": "18",
-          "description": "Carries toys while walking\nRemoves clothing\nTower of 4 blocks\nScribbles, fisted pencil grasp\n"
-        }
+        "age": "18",
+        "description": "Carries toys while walking\nRemoves clothing\nTower of 4 blocks\nScribbles, fisted pencil grasp\n"
       },
       {
-        "milestone": {
-          "age": "24",
-          "description": "Handedness established\nUses fork\nTower of 6 blocks\nImitates vertical stroke"
-        }
+        "age": "24",
+        "description": "Handedness established\nUses fork\nTower of 6 blocks\nImitates vertical stroke"
       },
       {
-        "milestone": {
-          "age": "36",
-          "description": "Undresses\nToilet trained (2.5 - 3.5 yrs)\nDraws circle, cross + \nTurns pages of books"
-        }
+        "age": "36",
+        "description": "Undresses\nToilet trained (2.5 - 3.5 yrs)\nDraws circle, cross + \nTurns pages of books"
       },
       {
-        "milestone": {
-          "age": "48",
-          "description": "Draws x, ☐, diagonals\nCuts shape with scissors\nButtons"
-        }
+        "age": "48",
+        "description": "Draws x, ☐, diagonals\nCuts shape with scissors\nButtons"
       },
       {
-        "milestone": {
-          "age": "60",
-          "description": "Draw person (10 body parts)\nTripod pencil grasp\nPrints name, copies letters\nIndependent ADLs, incl tying"
-        }
+        "age": "60",
+        "description": "Draw person (10 body parts)\nTripod pencil grasp\nPrints name, copies letters\nIndependent ADLs, incl tying"
       }
     ]
   },
@@ -157,76 +109,52 @@
     "category": "Speech / Language",
     "milestones": [
       {
-        "milestone": {
-          "age": "0",
-          "description": "Primitive reflexes - root, suck\nAlerts to sound\nStartles to loud sounds\nVariable cries"
-        }
+        "age": "0",
+        "description": "Primitive reflexes - root, suck\nAlerts to sound\nStartles to loud sounds\nVariable cries"
       },
       {
-        "milestone": {
-          "age": "2",
-          "description": "Turns to voice\nCooing"
-        }
+        "age": "2",
+        "description": "Turns to voice\nCooing"
       },
       {
-        "milestone": {
-          "age": "4",
-          "description": "Laugh, razz, \"ga\", squeal"
-        }
+        "age": "4",
+        "description": "Laugh, razz, \"ga\", squeal"
       },
       {
-        "milestone": {
-          "age": "6",
-          "description": "Babble (nonspecific)"
-        }
+        "age": "6",
+        "description": "Babble (nonspecific)"
       },
       {
-        "milestone": {
-          "age": "9",
-          "description": "\"Mama\", \"dada\" (specific)\nGestures \"bye bye\", \"up\"\nGesture games (\"pattyake\")"
-        }
+        "age": "9",
+        "description": "\"Mama\", \"dada\" (specific)\nGestures \"bye bye\", \"up\"\nGesture games (\"pattyake\")"
       },
       {
-        "milestone": {
-          "age": "12",
-          "description": "1 word with meaning (besides mama, dada)\nInhibits with \"no!\"\nResponds to own name\n1-step command with gesture"
-        }
+        "age": "12",
+        "description": "1 word with meaning (besides mama, dada)\nInhibits with \"no!\"\nResponds to own name\n1-step command with gesture"
       },
       {
-        "milestone": {
-          "age": "15",
-          "description": "Points to 1 body part\n1-step command  no gesture\n5 words\nJargoning"
-        }
+        "age": "15",
+        "description": "Points to 1 body part\n1-step command  no gesture\n5 words\nJargoning"
       },
       {
-        "milestone": {
-          "age": "18",
-          "description": "Points to object, 3 body parts\n10-25 words\nEmbedded jargoning\nLabels familiar objects\n"
-        }
+        "age": "18",
+        "description": "Points to object, 3 body parts\n10-25 words\nEmbedded jargoning\nLabels familiar objects\n"
       },
       {
-        "milestone": {
-          "age": "24",
-          "description": "Follows 2-step command\n50+ words, 50% intelligible\n2 word phrases\n\"I\", \"me\", \"you\", plurals\n"
-        }
+        "age": "24",
+        "description": "Follows 2-step command\n50+ words, 50% intelligible\n2 word phrases\n\"I\", \"me\", \"you\", plurals\n"
       },
       {
-        "milestone": {
-          "age": "36",
-          "description": "3-step commands\n200 words, 75% intelligible\n3-4 word phrases\nW questions (\"why?\")\nStates full name, age, gender\n"
-        }
+        "age": "36",
+        "description": "3-step commands\n200 words, 75% intelligible\n3-4 word phrases\nW questions (\"why?\")\nStates full name, age, gender\n"
       },
       {
-        "milestone": {
-          "age": "48",
-          "description": "Sentences, 100% intelligible\nTells a story\nPast tense"
-        }
+        "age": "48",
+        "description": "Sentences, 100% intelligible\nTells a story\nPast tense"
       },
       {
-        "milestone": {
-          "age": "60",
-          "description": "5000 words\nFuture tense\nWord play, jokes, puns\nPhonemic awareness"
-        }
+        "age": "60",
+        "description": "5000 words\nFuture tense\nWord play, jokes, puns\nPhonemic awareness"
       }
     ]
   },
@@ -234,76 +162,52 @@
     "category": "Cognitive / Problem Solving",
     "milestones": [
       {
-        "milestone": {
-          "age": "0",
-          "description": "Visual focal length ~10\"\nFix & follow slow horizontal arc \nPrefers contrast, colours, face\nPrefers high pitched voice"
-        }
+        "age": "0",
+        "description": "Visual focal length ~10\"\nFix & follow slow horizontal arc \nPrefers contrast, colours, face\nPrefers high pitched voice"
       },
       {
-        "milestone": {
-          "age": "2",
-          "description": "Prefers usual caregiver\nAttends to moderate novelty\nFollows past midline"
-        }
+        "age": "2",
+        "description": "Prefers usual caregiver\nAttends to moderate novelty\nFollows past midline"
       },
       {
-        "milestone": {
-          "age": "4",
-          "description": "Anticipates routines\nPurposeful sensory exploration of objects (eyes, hands, mouth)"
-        }
+        "age": "4",
+        "description": "Anticipates routines\nPurposeful sensory exploration of objects (eyes, hands, mouth)"
       },
       {
-        "milestone": {
-          "age": "6",
-          "description": "Stranger anxiety\nLooks for dropped or partially hidden object"
-        }
+        "age": "6",
+        "description": "Stranger anxiety\nLooks for dropped or partially hidden object"
       },
       {
-        "milestone": {
-          "age": "9",
-          "description": "Object permanence\nUncovers toy\n\"Peek-a-boo\""
-        }
+        "age": "9",
+        "description": "Object permanence\nUncovers toy\n\"Peek-a-boo\""
       },
       {
-        "milestone": {
-          "age": "12",
-          "description": "Cause & effect\nTrial & error\nImitates gestures and sounds\nUses objects functionally, eg rolls toy car\n"
-        }
+        "age": "12",
+        "description": "Cause & effect\nTrial & error\nImitates gestures and sounds\nUses objects functionally, eg rolls toy car\n"
       },
       {
-        "milestone": {
-          "age": "15",
-          "description": "Looks for moved hidden object if saw it being moved\nExperiments with toys to make them work"
-        }
+        "age": "15",
+        "description": "Looks for moved hidden object if saw it being moved\nExperiments with toys to make them work"
       },
       {
-        "milestone": {
-          "age": "18",
-          "description": "Imitates housework\nSymbolic play with doll or bear, eg \"Give teddy a drink\""
-        }
+        "age": "18",
+        "description": "Imitates housework\nSymbolic play with doll or bear, eg \"Give teddy a drink\""
       },
       {
-        "milestone": {
-          "age": "24",
-          "description": "New probelm-solving strategies without rehearsal\nSearches for hidden object after multiple displacements"
-        }
+        "age": "24",
+        "description": "New probelm-solving strategies without rehearsal\nSearches for hidden object after multiple displacements"
       },
       {
-        "milestone": {
-          "age": "36",
-          "description": "Simple time concepts \nIdentifies shapes\nCompares 2 items (eg \"bigger\")\nCounts to 3"
-        }
+        "age": "36",
+        "description": "Simple time concepts \nIdentifies shapes\nCompares 2 items (eg \"bigger\")\nCounts to 3"
       },
       {
-        "milestone": {
-          "age": "48",
-          "description": "Counts to 4\nOpposites\nIdentifies 4 colours\n"
-        }
+        "age": "48",
+        "description": "Counts to 4\nOpposites\nIdentifies 4 colours\n"
       },
       {
-        "milestone": {
-          "age": "60",
-          "description": "Counts to 10 accurately\nRecite ABC's by rote\nRecognises some letters\nPre-literacy and numeracy skills"
-        }
+        "age": "60",
+        "description": "Counts to 10 accurately\nRecite ABC's by rote\nRecognises some letters\nPre-literacy and numeracy skills"
       }
     ]
   },
@@ -311,76 +215,52 @@
     "category": "Social / Emotional",
     "milestones": [
       {
-        "milestone": {
-          "age": "0",
-          "description": "Bonding (parent -> child)\nSelf- regulation/soothing"
-        }
+        "age": "0",
+        "description": "Bonding (parent -> child)\nSelf- regulation/soothing"
       },
       {
-        "milestone": {
-          "age": "2",
-          "description": "Attachment (child -> parent)\nSocial smile"
-        }
+        "age": "2",
+        "description": "Attachment (child -> parent)\nSocial smile"
       },
       {
-        "milestone": {
-          "age": "4",
-          "description": "Turn-taking conversations \nExplores parent's face"
-        }
+        "age": "4",
+        "description": "Turn-taking conversations \nExplores parent's face"
       },
       {
-        "milestone": {
-          "age": "6",
-          "description": "Expresses emotions: happy, sad, mad\nMemory lasts ~24 hrs"
-        }
+        "age": "6",
+        "description": "Expresses emotions: happy, sad, mad\nMemory lasts ~24 hrs"
       },
       {
-        "milestone": {
-          "age": "9",
-          "description": "Seperation anxiety"
-        }
+        "age": "9",
+        "description": "Seperation anxiety"
       },
       {
-        "milestone": {
-          "age": "12",
-          "description": "Explore from secure base\nPoints at wanted items\nNarrative memory begins"
-        }
+        "age": "12",
+        "description": "Explore from secure base\nPoints at wanted items\nNarrative memory begins"
       },
       {
-        "milestone": {
-          "age": "15",
-          "description": "Shared attention: points at interesting items to show to parent\nBrings toys to parent"
-        }
+        "age": "15",
+        "description": "Shared attention: points at interesting items to show to parent\nBrings toys to parent"
       },
       {
-        "milestone": {
-          "age": "18",
-          "description": "Increased independence\nParallel play"
-        }
+        "age": "18",
+        "description": "Increased independence\nParallel play"
       },
       {
-        "milestone": {
-          "age": "24",
-          "description": "Testing limits, tantrums\nNegativism (\"no!\")\nPossessive (\"mine!\")"
-        }
+        "age": "24",
+        "description": "Testing limits, tantrums\nNegativism (\"no!\")\nPossessive (\"mine!\")"
       },
       {
-        "milestone": {
-          "age": "36",
-          "description": "Seperates easily\nSharing, empathy\nCooperative play\nRole play (\"pretending\")"
-        }
+        "age": "36",
+        "description": "Seperates easily\nSharing, empathy\nCooperative play\nRole play (\"pretending\")"
       },
       {
-        "milestone": {
-          "age": "48",
-          "description": "Has preferred friend\nElaborate fantasy play"
-        }
+        "age": "48",
+        "description": "Has preferred friend\nElaborate fantasy play"
       },
       {
-        "milestone": {
-          "age": "60",
-          "description": "Has group of friends\nFollows group rules\nGames with rules"
-        }
+        "age": "60",
+        "description": "Has group of friends\nFollows group rules\nGames with rules"
       }
     ]
   }

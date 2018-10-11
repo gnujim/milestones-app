@@ -1,95 +1,122 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import { Text, View, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
-import * as devData from './devMilestones.json';
-import { Card } from './components/Card.js';
-// import { Slide } from
+import { Constants } from 'expo';
+import devData from './devMilestones.json';
+// import { Card } from './components/Card.js';
+import { colorForTopic } from './Utils';
 
-type Milestone = { age: number; description: string };
 type Category = {
   category: string;
-  milestones: Milestone[];
+  milestones: { age: number; description: string }[];
 };
 
-const data: Category[] = devData as any;
+const data: Category[] = devData;
 
 // consts from stove
 const { width, height } = Dimensions.get('screen');
-const gridX = 5;
-const gridY = 12;
-const grid = [...Array(gridX || 0)].map((v, i) => {
-  return [...Array(gridY || 0)].map((v, i) => i);
-});
 
-const colorForTopic = (
-  count: number,
-  index: number,
-  y: number,
-  range: number = 360,
-  startAngle: number = 0,
-  favourEdges: boolean = false,
-) => {
-  const saturation = `${((y + 1) / count) * 100}%`;
+// STYLED COMPONENTS
+// wut is screencontainer vs container
+const ScreenContainer = styled.View`
+  flex: 1;
+`;
 
-  const stepValue = range / count;
-  const midPoint = range / 2;
-  let hueVal: number;
-  const lightVal: string = '60%';
-  if (range <= 330) {
-    hueVal = ((range * index) / (count - 1) + startAngle) % 360;
-  } else {
-    hueVal = ((range * index) / (count + 1) + startAngle) % 360;
-  }
+const Container = styled.View<{ color: string }>`
+  height: ${height};
+  width: ${width};
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ color }) => color};
+`;
 
-  if (favourEdges) {
-    if (hueVal < midPoint) {
-      hueVal = hueVal - index * (stepValue / 2);
-    } else if (hueVal > midPoint) {
-      hueVal = hueVal + (count - 1 - index) * (stepValue / 2);
-    }
-  }
+const CardContainer = styled.View`
+  background: #fff;
+  height: 40%;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 10px 5px 5px #0002;
+`;
 
-  return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
-};
+const CatContainer = styled.View`
+  position: absolute;
+  top: ${Constants.statusBarHeight};
+  left: 0;
+  right: 0;
+  height: 64;
+  align-items: center;
+  justify-content: center;
+  border: red 1px;
+`;
+
+const Cat = styled.Text`
+  background-color: #fffa;
+  background: #fffa;
+  border-radius: 8;
+  padding: 8px;
+  overflow: hidden;
+`;
+
+const AgeContainer = styled.View`
+  position: absolute;
+  top: ${Constants.statusBarHeight + 64};
+  bottom: 0;
+  left: 0;
+  width: 64;
+  align-items: center;
+  justify-content: center;
+  border: red 1px;
+`;
 
 export default class App extends React.Component {
+  state = {
+    x: 0,
+    y: 0,
+  };
   render() {
     return (
-      <ScrollView
-        contentContainerStyle={{
-          height: height * gridY,
-          width: width * gridX,
-          flexWrap: 'wrap',
-        }}
-        bounces={false}
-        showsHorizontalScrollIndicator={false}
-        showsVerticalScrollIndicator={false}
-        directionalLockEnabled
-        pagingEnabled>
-        {grid.map((col, x) => {
-          return col.map((row, y) => {
-            const text = `[${x},${y} - ${JSON.stringify(data[x].category)}${JSON.stringify(
-              data[x].milestones[y],
-            )}]`;
-            return (
-              <View
-                key={`[${x},${y}]`}
-                style={[styles.container, { backgroundColor: colorForTopic(gridY, x, y) }]}>
-                <Card>{text}</Card>
-              </View>
-            );
-          });
-        })}
-      </ScrollView>
+      <ScreenContainer>
+        <ScrollView
+          contentContainerStyle={{
+            height: height * data[0].milestones.length,
+            width: width * data.length,
+            flexWrap: 'wrap',
+          }}
+          bounces={false}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          directionalLockEnabled
+          pagingEnabled
+          onScroll={event => {
+            const { x, y } = event.nativeEvent.contentOffset;
+            this.setState({
+              x: Math.round(x / width),
+              y: Math.round(y / height),
+            });
+          }}
+          scrollEventThrottle={100}>
+          {data.map((col, x) => {
+            return col.milestones.map((row, y) => {
+              return (
+                <Container key={y} color={colorForTopic(col.milestones.length, x, y)}>
+                  <CardContainer>
+                    <Text>{row.description}</Text>
+                    <Text>
+                      {x},{y}
+                    </Text>
+                  </CardContainer>
+                </Container>
+              );
+            });
+          })}
+        </ScrollView>
+        <CatContainer>
+          <Cat>{data[this.state.x].category}</Cat>
+        </CatContainer>
+        <AgeContainer>
+          <Cat>{data[0].milestones[this.state.y].age}</Cat>
+        </AgeContainer>
+      </ScreenContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    height,
-    width,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -505,6 +505,20 @@
     pouchdb-collections "^1.0.1"
     tiny-queue "^0.2.1"
 
+"@types/expo@^27.0.13":
+  version "27.0.13"
+  resolved "https://registry.yarnpkg.com/@types/expo/-/expo-27.0.13.tgz#7fa0a78c379bb686219017cfb2e8bf099ff666f3"
+  integrity sha512-4XvXZVQRAzMTRbzDONnKXqBVq1iLhyDqD6UMO53A9T28kF1zxmuHjaWHOfaxxKpZusC4SrD5yyqTGS2rvEJkTA==
+  dependencies:
+    "@types/fbemitter" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/fbemitter@*":
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
+  integrity sha1-jtIE2g9U6cjq7DGx7skeJRMtCCw=
+
 "@types/node@*", "@types/node@^10.11.0":
   version "10.11.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.5.tgz#6489ebda4452592d3fd37aefa57eedc01ed13378"
@@ -522,7 +536,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
-"@types/react-native@^0.57.4":
+"@types/react-native@*", "@types/react-native@^0.57.4":
   version "0.57.4"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.4.tgz#20824c0ccc2701d81b91af015f96afae095024e5"
   integrity sha512-ZZArJ0va17Gz+MnCh3TR12T1yB0RD/+uALAtTEl2y67MATrcMXGH/HYgJ/VX/TAS0P3fsrYE6HePmaGMW+1sEw==

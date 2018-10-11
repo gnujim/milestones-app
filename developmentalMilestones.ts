@@ -13,15 +13,13 @@ const categories = parsed[0].slice(1).map(word => {
 
 // TRANSFORM DATA STRUCTURE
 console.log(categories);
-const appData = categories.map((title, index) => {
+const appData = categories.map((category, index) => {
   return {
-    category: title,
+    category,
     milestones: parsed.slice(1).map(milestone => {
       return {
-        milestone: {
-          age: milestone[0],
-          description: milestone[index + 1],
-        },
+        age: milestone[0],
+        description: milestone[index + 1],
       };
     }),
   };
