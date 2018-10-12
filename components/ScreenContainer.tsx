@@ -52,7 +52,7 @@ const AgeContainer = styled.View`
 `;
 
 const calculateAge = (age: number) => {
-  return age > 18 ? `${age / 12} years` : `${age} months`;
+  return age > 18 ? `${age / 12} yrs` : `${age} mos`;
 };
 
 // Could maybe rename this? I dunno....
