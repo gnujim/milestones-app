@@ -51,6 +51,10 @@ const AgeContainer = styled.View`
   border: red 1px;
 `;
 
+const calculateAge = (age: number) => {
+  return age > 18 ? `${age / 12} years` : `${age} months`;
+};
+
 // Could maybe rename this? I dunno....
 export const ScreenContainer: React.SFC<{
   state: { x: number; y: number };
@@ -63,7 +67,7 @@ export const ScreenContainer: React.SFC<{
         <Cat>{data[props.state.x].category}</Cat>
       </CatContainer>
       <AgeContainer>
-        <Cat>{data[0].milestones[props.state.y].age}</Cat>
+        <Cat>{calculateAge(data[0].milestones[props.state.y].age)}</Cat>
       </AgeContainer>
     </ScreenWrapper>
   );
