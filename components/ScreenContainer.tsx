@@ -1,21 +1,10 @@
 // Third-party imports
 import React from 'react';
-import { Text, View, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import { Constants } from 'expo';
 
-import devData from '../devMilestones.json';
-import { ScrollingView } from '../components/ScrollingView';
-
-type Category = {
-  category: string;
-  milestones: { age: number; description: string }[];
-};
-
-const data: Category[] = devData;
-
-// consts from stove
-const { width, height } = Dimensions.get('screen');
+import { Grid } from './Grid';
+import { Category } from '../App';
 
 const ScreenWrapper = styled.View`
   flex: 1;
@@ -42,10 +31,12 @@ const Cat = styled.Text`
 
 const AgeContainer = styled.View`
   position: absolute;
-  top: ${Constants.statusBarHeight + 64};
-  bottom: 0;
+  /* top: ${Constants.statusBarHeight + 64}; */
+  bottom: ${Constants.statusBarHeight};
   left: 0;
-  width: 64;
+  right: 0;
+  height: 64;
+  /* width: 64; */
   align-items: center;
   justify-content: center;
   border: red 1px;
@@ -57,18 +48,30 @@ const calculateAge = (age: number) => {
 
 // Could maybe rename this? I dunno....
 export const ScreenContainer: React.SFC<{
-  state: { x: number; y: number };
+  state: { x: number; y: number; data: Category[] };
   updateState: (x: number, y: number) => void;
-}> = props => {
+}> = ({ state, updateState }) => {
   return (
     <ScreenWrapper>
-      <ScrollingView state={props.state} updateState={props.updateState} />
-      <CatContainer>
-        <Cat>{data[props.state.x].category}</Cat>
-      </CatContainer>
-      <AgeContainer>
-        <Cat>{calculateAge(data[0].milestones[props.state.y].age)}</Cat>
-      </AgeContainer>
+      <Grid state={state} updateState={updateState} />
+      <Category category={state.data[state.x].category} />
+      <Age age={calculateAge(state.data[0].milestones[state.y].age)} />
     </ScreenWrapper>
+  );
+};
+
+const Category: React.SFC<{ category: string }> = ({ category }) => {
+  return (
+    <CatContainer>
+      <Cat>{category}</Cat>
+    </CatContainer>
+  );
+};
+
+const Age: React.SFC<{ age: string }> = ({ age }) => {
+  return (
+    <AgeContainer>
+      <Cat>{age}</Cat>
+    </AgeContainer>
   );
 };

@@ -2,15 +2,8 @@ import React from 'react';
 import { Text, View, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
-import devData from '../devMilestones.json';
 import { colorForTopic } from '../Utils';
-
-type Category = {
-  category: string;
-  milestones: { age: number; description: string }[];
-};
-
-const data: Category[] = devData;
+import { Category } from '../App';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -23,22 +16,24 @@ const Container = styled.View<{ color: string }>`
 `;
 
 const CardContainer = styled.View`
-  background: #fff;
+  background: #ffffff59;
   height: 40%;
   width: 60%;
   border-radius: 8px;
-  box-shadow: 10px 5px 5px #0002;
+  justify-content: center;
 `;
 
-export const ScrollingView: React.SFC<{
-  state: { x: number; y: number };
+const CardText = styled.Text``;
+
+export const Grid: React.SFC<{
+  state: { x: number; y: number; data: Category[] };
   updateState: (x: number, y: number) => void;
-}> = props => {
+}> = ({ state, updateState }) => {
   return (
     <ScrollView
       contentContainerStyle={{
-        height: height * data[0].milestones.length,
-        width: width * data.length,
+        height: height * state.data[0].milestones.length,
+        width: width * state.data.length,
         flexWrap: 'wrap',
       }}
       bounces={false}
@@ -48,10 +43,10 @@ export const ScrollingView: React.SFC<{
       pagingEnabled
       onScroll={event => {
         const { x, y } = event.nativeEvent.contentOffset;
-        props.updateState(x, y);
+        updateState(x, y);
       }}
       scrollEventThrottle={100}>
-      {data.map((col, x) => {
+      {state.data.map((col, x) => {
         return col.milestones.map((row, y) => {
           return (
             <Container key={y} color={colorForTopic(col.milestones.length, x, y)}>

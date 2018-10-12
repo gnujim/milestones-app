@@ -1,10 +1,14 @@
 import * as React from 'react';
-import { Text, View, ScrollView, Dimensions } from 'react-native';
-import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
 import devData from './devMilestones.json';
 import { ScreenContainer } from './components/ScreenContainer';
 
-// this is type of cat
+export type Category = {
+  category: string;
+  milestones: { age: number; description: string }[];
+};
+
+const data: Category[] = devData;
 
 // STYLED COMPONENTS
 // wut is screencontainer vs container
@@ -16,6 +20,7 @@ export default class App extends React.Component {
   state = {
     x: 0,
     y: 0,
+    data,
   }; // you can initialize state here without constructor
 
   private updateState = (x: number, y: number) => {
