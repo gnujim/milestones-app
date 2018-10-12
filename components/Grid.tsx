@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, ScrollView, Dimensions } from 'react-native';
+import { Text, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
 import { colorForTopic } from '../Utils';

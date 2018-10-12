@@ -28,3 +28,7 @@ export const colorForTopic = (
 
   return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
 };
+
+export const calculateAge = (age: number) => {
+  return age > 18 ? `${age / 12} yrs` : `${age} mos`;
+};
