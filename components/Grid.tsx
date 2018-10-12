@@ -63,3 +63,5 @@ export const Grid: React.SFC<{
     </ScrollView>
   );
 };
+
+// const Container: React.SFC<{ key: number; color: string;}>

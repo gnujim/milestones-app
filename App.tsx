@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Dimensions } from 'react-native';
+
 import devData from './devMilestones.json';
-import { ScreenContainer } from './components/ScreenContainer';
+import { Screen } from './components/Screen';
 
 export type Category = {
   category: string;
@@ -9,12 +10,6 @@ export type Category = {
 };
 
 const data: Category[] = devData;
-
-// STYLED COMPONENTS
-// wut is screencontainer vs container
-// const ScreenContainer = styled.View`
-//   flex: 1;
-// `;
 
 export default class App extends React.Component {
   state = {
@@ -24,7 +19,6 @@ export default class App extends React.Component {
   }; // you can initialize state here without constructor
 
   private updateState = (x: number, y: number) => {
-    // we don't need to feed in width and height here, since we can just get it from Dimensions
     const dimensions = Dimensions.get('screen');
     const { width, height } = dimensions;
 
@@ -35,6 +29,6 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <ScreenContainer state={this.state} updateState={this.updateState} />;
+    return <Screen state={this.state} updateState={this.updateState} />;
   }
 }
