@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 import chroma from 'chroma-js';
 
 import { colorForTopic } from '../Utils';
-import { MilestoneCategory } from '../App';
+import { Category } from '../App';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -27,7 +27,7 @@ const CardContainer = styled.View`
 const CardText = styled.Text``;
 
 export const Grid: React.SFC<{
-  state: { x: number; y: number; data: MilestoneCategory[] };
+  state: { x: number; y: number; data: Category[] };
   updateState: (x: number, y: number) => void;
 }> = ({ state, updateState }) => {
   return (
@@ -52,12 +52,14 @@ export const Grid: React.SFC<{
           const colors = colorForTopic(col.milestones.length, x, y);
           return (
             <Container key={y} color={colors}>
-              <CardContainer>
-                <Text>{row.description}</Text>
-                <Text>
-                  {x},{y}
-                </Text>
-              </CardContainer>
+              {state.fontLoaded ? (
+                <CardContainer>
+                  <Text style={{ fontFamily: 'playfair-display' }}>{row.description}</Text>
+                  <Text style={{ fontFamily: 'playfair-display' }}>
+                    {x},{y}
+                  </Text>
+                </CardContainer>
+              ) : null}
             </Container>
           );
         });

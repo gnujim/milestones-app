@@ -17,6 +17,7 @@ const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
   border-radius: 8;
+  /* font-family: 'playfair-display'; */
   padding: 8px;
   overflow: hidden;
 `;
