@@ -1,3 +1,5 @@
+import chroma from 'chroma-js';
+
 export const colorForTopic = (
   count: number,
   index: number,
@@ -26,7 +28,13 @@ export const colorForTopic = (
     }
   }
 
-  return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
+  // return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
+  const colors = chroma
+    .scale('RdYlBu')
+    .mode('lch')
+    .colors(11);
+
+  return chroma(colors[index]).darken(y / 5);
 };
 
 export const calculateAge = (age: number) => {

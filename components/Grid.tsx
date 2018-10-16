@@ -1,9 +1,10 @@
 import React from 'react';
 import { Text, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
+import chroma from 'chroma-js';
 
 import { colorForTopic } from '../Utils';
-import { Category } from '../App';
+import { MilestoneCategory } from '../App';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -26,7 +27,7 @@ const CardContainer = styled.View`
 const CardText = styled.Text``;
 
 export const Grid: React.SFC<{
-  state: { x: number; y: number; data: Category[] };
+  state: { x: number; y: number; data: MilestoneCategory[] };
   updateState: (x: number, y: number) => void;
 }> = ({ state, updateState }) => {
   return (
@@ -48,8 +49,9 @@ export const Grid: React.SFC<{
       scrollEventThrottle={100}>
       {state.data.map((col, x) => {
         return col.milestones.map((row, y) => {
+          const colors = colorForTopic(col.milestones.length, x, y);
           return (
-            <Container key={y} color={colorForTopic(col.milestones.length, x, y)}>
+            <Container key={y} color={colors}>
               <CardContainer>
                 <Text>{row.description}</Text>
                 <Text>
@@ -65,3 +67,4 @@ export const Grid: React.SFC<{
 };
 
 // const Container: React.SFC<{ key: number; color: string;}>
+// colorForTopic(col.milestones.length, x, y)

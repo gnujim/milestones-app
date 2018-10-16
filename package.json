@@ -12,12 +12,14 @@
     "nuke-node": "rm -rf node_modules && yarn install"
   },
   "dependencies": {
+    "chroma-js": "^1.4.0",
     "expo": "^30.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "styled-components": "^3.4.10"
   },
   "devDependencies": {
+    "@types/chroma-js": "^1.4.0",
     "@types/expo": "^27.0.13",
     "@types/node": "^10.11.0",
     "@types/papaparse": "^4.5.4",
