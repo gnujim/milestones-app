@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 import { Grid } from './Grid';
-import { Category } from './Category'; //rename?
+import { CategoryTitle } from './CategoryTitle';
 import { Age } from './Age';
 import { calculateAge } from '../Utils';
 import { Category } from '../App';
@@ -19,7 +19,7 @@ export const Screen: React.SFC<{
   return (
     <ScreenContainer>
       <Grid state={state} updateState={updateState} />
-      <Category category={state.data[state.x].category} />
+      <CategoryTitle category={state.data[state.x].category} />
       <Age age={calculateAge(state.data[0].milestones[state.y].age)} />
     </ScreenContainer>
   );

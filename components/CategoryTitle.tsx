@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { Constants } from 'expo';
 
-import { Category } from '../App';
-
 const CatContainer = styled.View`
   position: absolute;
   top: ${Constants.statusBarHeight};
@@ -23,7 +21,7 @@ const Cat = styled.Text`
   overflow: hidden;
 `;
 
-export const Category: React.SFC<{ category: string }> = ({ category }) => {
+export const CategoryTitle: React.SFC<{ category: string }> = ({ category }) => {
   return (
     <CatContainer>
       <Cat>{category}</Cat>
