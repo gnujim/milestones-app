@@ -12,13 +12,14 @@ const AgeContainer = styled.View`
   /* width: 64; */
   align-items: center;
   justify-content: center;
-  border: red 1px;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
   border-radius: 8;
+  font-family: 'playfair-display-bold';
+  font-size: 16px;
   padding: 8px;
   overflow: hidden;
 `;

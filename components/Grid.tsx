@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 import chroma from 'chroma-js';
 
 import { colorForTopic, milestoneSplit } from '../Utils';
-import { Category } from '../App';
+import { CategoryType } from '../App';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -26,13 +26,13 @@ const CardContainer = styled.View`
 `;
 
 const CardText = styled.Text`
-  font-family: 'playfair-display';
+  /* font-family: 'playfair-display'; */
   font-size: 20px;
   line-height: 25px;
 `;
 
 export const Grid: React.SFC<{
-  state: { x: number; y: number; data: Category[] };
+  state: { x: number; y: number; data: CategoryType[] };
   updateState: (x: number, y: number) => void;
 }> = ({ state, updateState }) => {
   return (
@@ -66,9 +66,6 @@ export const Grid: React.SFC<{
                     </CardText>
                   );
                 })}
-                <Text style={{ fontFamily: 'playfair-display' }}>
-                  {x},{y}
-                </Text>
               </CardContainer>
             </Container>
           );

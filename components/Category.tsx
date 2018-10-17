@@ -10,19 +10,19 @@ const CatContainer = styled.View`
   height: 64;
   align-items: center;
   justify-content: center;
-  border: red 1px;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
   border-radius: 8;
-  /* font-family: 'playfair-display'; */
+  font-family: 'playfair-display-bold';
+  font-size: 16px;
   padding: 8px;
   overflow: hidden;
 `;
 
-export const CategoryTitle: React.SFC<{ category: string }> = ({ category }) => {
+export const Category: React.SFC<{ category: string }> = ({ category }) => {
   return (
     <CatContainer>
       <Cat>{category}</Cat>

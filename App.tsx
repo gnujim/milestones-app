@@ -4,14 +4,21 @@ import { Font } from 'expo';
 import styled from 'styled-components/native';
 
 import devData from './devMilestones.json';
-import { Screen } from './components/Screen';
+import { Grid } from './components/Grid';
+import { Category } from './components/Category';
+import { Age } from './components/Age';
+import { calculateAge } from './Utils';
 
-export type Category = {
+export type CategoryType = {
   category: string;
   milestones: { age: string; description: string }[];
 };
 
-const data: Category[] = devData;
+const data: CategoryType[] = devData;
+
+const Screen = styled.View`
+  flex: 1;
+`;
 
 export default class App extends React.Component {
   state = {
@@ -21,9 +28,11 @@ export default class App extends React.Component {
     fontLoaded: false,
   }; // you can initialize state here without constructor
 
+  // LOAD FONTS
   async componentDidMount() {
     await Font.loadAsync({
       'playfair-display': require('./assets/Playfair_Display/PlayfairDisplay-Regular.ttf'),
+      'playfair-display-bold': require('./assets/Playfair_Display/PlayfairDisplay-Bold.ttf'),
     });
 
     this.setState({ fontLoaded: true });
@@ -41,7 +50,11 @@ export default class App extends React.Component {
 
   render() {
     return this.state.fontLoaded ? (
-      <Screen state={this.state} updateState={this.updateState} />
+      <Screen>
+        <Grid state={this.state} updateState={this.updateState} />
+        <Category category={this.state.data[this.state.x].category} />
+        <Age age={calculateAge(parseInt(this.state.data[0].milestones[this.state.y].age))} />
+      </Screen>
     ) : null;
   }
 }
