@@ -38,5 +38,9 @@ export const colorForTopic = (
 };
 
 export const calculateAge = (age: number) => {
-  return age > 18 ? `${age / 12} yrs` : `${age} mos`;
+  return age === 0 ? 'newborn' : age > 18 ? `${age / 12} yrs` : `${age} mos`;
+};
+
+export const milestoneSplit = (milestone: string) => {
+  return milestone.split('\n');
 };

@@ -8,7 +8,7 @@ import { Screen } from './components/Screen';
 
 export type Category = {
   category: string;
-  milestones: { age: number; description: string }[];
+  milestones: { age: string; description: string }[];
 };
 
 const data: Category[] = devData;
@@ -40,6 +40,8 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <Screen state={this.state} updateState={this.updateState} />;
+    return this.state.fontLoaded ? (
+      <Screen state={this.state} updateState={this.updateState} />
+    ) : null;
   }
 }

@@ -20,7 +20,7 @@ export const Screen: React.SFC<{
     <ScreenContainer>
       <Grid state={state} updateState={updateState} />
       <CategoryTitle category={state.data[state.x].category} />
-      <Age age={calculateAge(state.data[0].milestones[state.y].age)} />
+      <Age age={calculateAge(parseInt(state.data[0].milestones[state.y].age))} />
     </ScreenContainer>
   );
 };

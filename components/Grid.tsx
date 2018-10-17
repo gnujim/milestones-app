@@ -3,7 +3,7 @@ import { Text, ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import chroma from 'chroma-js';
 
-import { colorForTopic } from '../Utils';
+import { colorForTopic, milestoneSplit } from '../Utils';
 import { Category } from '../App';
 
 const { width, height } = Dimensions.get('screen');
@@ -18,13 +18,18 @@ const Container = styled.View<{ color: string }>`
 
 const CardContainer = styled.View`
   background: #ffffff59;
-  height: 40%;
-  width: 60%;
+  height: 30%;
+  width: 80%;
   border-radius: 8px;
   justify-content: center;
+  padding: 2px;
 `;
 
-const CardText = styled.Text``;
+const CardText = styled.Text`
+  font-family: 'playfair-display';
+  font-size: 20px;
+  line-height: 25px;
+`;
 
 export const Grid: React.SFC<{
   state: { x: number; y: number; data: Category[] };
@@ -51,15 +56,20 @@ export const Grid: React.SFC<{
         return col.milestones.map((row, y) => {
           const colors = colorForTopic(col.milestones.length, x, y);
           return (
-            <Container key={y} color={colors}>
-              {state.fontLoaded ? (
-                <CardContainer>
-                  <Text style={{ fontFamily: 'playfair-display' }}>{row.description}</Text>
-                  <Text style={{ fontFamily: 'playfair-display' }}>
-                    {x},{y}
-                  </Text>
-                </CardContainer>
-              ) : null}
+            <Container key={y} color={colors.hex()}>
+              <CardContainer>
+                {milestoneSplit(row.description).map(bullet => {
+                  return (
+                    <CardText key={bullet}>
+                      &bull; &nbsp;
+                      {bullet}
+                    </CardText>
+                  );
+                })}
+                <Text style={{ fontFamily: 'playfair-display' }}>
+                  {x},{y}
+                </Text>
+              </CardContainer>
             </Container>
           );
         });

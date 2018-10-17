@@ -19,7 +19,7 @@ const appData = categories.map((category, index) => {
     milestones: parsed.slice(1).map(milestone => {
       return {
         age: milestone[0],
-        description: milestone[index + 1],
+        description: milestone[index + 1].trim(),
       };
     }),
   };
