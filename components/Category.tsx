@@ -4,20 +4,22 @@ import { Constants } from 'expo';
 
 const CatContainer = styled.View`
   position: absolute;
-  top: ${Constants.statusBarHeight};
-  left: 0;
-  right: 0;
-  height: 64;
-  align-items: center;
-  justify-content: center;
+  top: ${Constants.statusBarHeight + 100};
+  /* left: 0; */
+  /* right: 0; */
+  max-width: 100%;
+  align-self: center;
+  /* height: 30%; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  border: 1px red;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
-  border-radius: 8;
   font-family: 'playfair-display-bold';
-  font-size: 16px;
+  font-size: 22px;
   padding: 8px;
   overflow: hidden;
 `;

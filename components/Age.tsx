@@ -5,21 +5,22 @@ import { Constants } from 'expo';
 const AgeContainer = styled.View`
   position: absolute;
   /* top: ${Constants.statusBarHeight + 64}; */
-  bottom: ${Constants.statusBarHeight};
-  left: 0;
-  right: 0;
-  height: 64;
-  /* width: 64; */
-  align-items: center;
-  justify-content: center;
+  bottom: ${Constants.statusBarHeight + 100};
+  /* left: 0;
+  right: 0; */
+  max-width: 100%;
+  align-self: center;
+  /* height: 20%; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  border: 1px red;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
-  border-radius: 8;
   font-family: 'playfair-display-bold';
-  font-size: 16px;
+  font-size: 22px;
   padding: 8px;
   overflow: hidden;
 `;

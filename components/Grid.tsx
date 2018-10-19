@@ -17,8 +17,8 @@ const Container = styled.View<{ color: string }>`
 `;
 
 const CardContainer = styled.View`
-  background: #ffffff59;
-  height: 30%;
+  background: #ffffff95;
+  height: 40%;
   width: 80%;
   border-radius: 8px;
   justify-content: center;
@@ -26,7 +26,7 @@ const CardContainer = styled.View`
 `;
 
 const CardText = styled.Text`
-  /* font-family: 'playfair-display'; */
+  font-family: 'source-serif-pro';
   font-size: 20px;
   line-height: 25px;
 `;
@@ -59,12 +59,7 @@ export const Grid: React.SFC<{
             <Container key={y} color={colors.hex()}>
               <CardContainer>
                 {milestoneSplit(row.description).map(bullet => {
-                  return (
-                    <CardText key={bullet}>
-                      &bull; &nbsp;
-                      {bullet}
-                    </CardText>
-                  );
+                  return <BulletPoint key={bullet} text={bullet} />;
                 })}
               </CardContainer>
             </Container>
@@ -72,6 +67,15 @@ export const Grid: React.SFC<{
         });
       })}
     </ScrollView>
+  );
+};
+
+const BulletPoint: React.SFC<{ text: string }> = ({ text }) => {
+  return (
+    <CardText>
+      &bull; &nbsp;
+      {text}
+    </CardText>
   );
 };
 

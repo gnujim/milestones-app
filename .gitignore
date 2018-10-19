@@ -4,3 +4,4 @@ npm-debug.*
 .DS_Store
 **/*.js
 **/*.js.map
+assets/fonts

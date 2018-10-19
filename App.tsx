@@ -31,8 +31,10 @@ export default class App extends React.Component {
   // LOAD FONTS
   async componentDidMount() {
     await Font.loadAsync({
-      'playfair-display': require('./assets/Playfair_Display/PlayfairDisplay-Regular.ttf'),
-      'playfair-display-bold': require('./assets/Playfair_Display/PlayfairDisplay-Bold.ttf'),
+      'playfair-display': require('./assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf'),
+      'playfair-display-bold': require('./assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf'),
+      dosis: require('./assets/fonts/Dosis/Dosis-Regular.ttf'),
+      'source-serif-pro': require('./assets/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf'),
     });
 
     this.setState({ fontLoaded: true });

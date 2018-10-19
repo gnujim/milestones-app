@@ -1,40 +1,31 @@
 import chroma from 'chroma-js';
 
-export const colorForTopic = (
-  count: number,
-  index: number,
-  y: number,
-  range: number = 360,
-  startAngle: number = 0,
-  favourEdges: boolean = false,
-) => {
-  const saturation = `${((y + 1) / count) * 100}%`;
+export const colorForTopic = (count: number, index: number, y: number) => {
+  // #b3c2ff to #4f4f87 (228 - 240) blues
+  // #ffb3ec to #874f6e (315 - 327) purpley pink
+  // #b3ffb3 to #4f875a (120 - 132) greens
+  // yellows
+  // oranges
 
-  const stepValue = range / count;
-  const midPoint = range / 2;
-  let hueVal: number;
-  const lightVal: string = '60%';
-  if (range <= 330) {
-    hueVal = ((range * index) / (count - 1) + startAngle) % 360;
-  } else {
-    hueVal = ((range * index) / (count + 1) + startAngle) % 360;
-  }
+  // #b3c2ff to #4f6f87 (228 - 206) blues
+  // #ffb3ec to #814f87 (315 - 293) purpley pink
+  // #b3ffb3 to #64874f (120 - 98) greens
 
-  if (favourEdges) {
-    if (hueVal < midPoint) {
-      hueVal = hueVal - index * (stepValue / 2);
-    } else if (hueVal > midPoint) {
-      hueVal = hueVal + (count - 1 - index) * (stepValue / 2);
-    }
-  }
+  const colorPairs: String[][] = [
+    ['#b3c2ff', '#4f4f87'],
+    ['#ffb3ec', '#874f6e'],
+    ['#b3ffb3', '#4f875a'],
+    ['#fff', '#Fff'],
+    ['#fff', '#fff'],
+  ];
 
-  // return `hsl(${Math.round(hueVal)}, ${saturation}, ${lightVal})`;
+  // HARDCODE 5 COLORS
   const colors = chroma
-    .scale('RdYlBu')
+    .scale(colorPairs[index])
     .mode('lch')
-    .colors(11);
+    .colors(count);
 
-  return chroma(colors[index]).darken(y / 5);
+  return chroma(colors[y]);
 };
 
 export const calculateAge = (age: number) => {
