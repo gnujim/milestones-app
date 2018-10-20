@@ -13,14 +13,21 @@ const AgeContainer = styled.View`
   /* height: 20%; */
   /* align-items: center; */
   /* justify-content: center; */
-  border: 1px red;
+`;
+
+const Test = styled.View`
+  background: black;
+  border-radius: 1px;
+  height: 2px;
+  width: 40%;
+  margin: auto;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
-  font-family: 'playfair-display-bold';
-  font-size: 22px;
+  font-family: 'averia-serif-libre';
+  font-size: 24px;
   padding: 8px;
   overflow: hidden;
 `;
@@ -28,6 +35,7 @@ const Cat = styled.Text`
 export const Age: React.SFC<{ age: string }> = ({ age }) => {
   return (
     <AgeContainer>
+      <Test />
       <Cat>{age}</Cat>
     </AgeContainer>
   );

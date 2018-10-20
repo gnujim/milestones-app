@@ -5,30 +5,27 @@ import chroma from 'chroma-js';
 
 import { colorForTopic, milestoneSplit } from '../Utils';
 import { CategoryType } from '../App';
+import { Milestone } from './Milestone';
 
 const { width, height } = Dimensions.get('screen');
 
 const Container = styled.View<{ color: string }>`
+  background-color: ${({ color }) => color};
   height: ${height};
   width: ${width};
   align-items: center;
   justify-content: center;
-  background-color: ${({ color }) => color};
 `;
 
 const CardContainer = styled.View`
-  background: #ffffff95;
+  background-color: #fdfdfd;
+  /* box-shadow: 0px 0px 5px #fdfdfd; */
+  border: 2px black;
+  border-radius: 5px;
   height: 40%;
   width: 80%;
-  border-radius: 8px;
   justify-content: center;
-  padding: 2px;
-`;
-
-const CardText = styled.Text`
-  font-family: 'source-serif-pro';
-  font-size: 20px;
-  line-height: 25px;
+  padding: 12px;
 `;
 
 export const Grid: React.SFC<{
@@ -59,7 +56,7 @@ export const Grid: React.SFC<{
             <Container key={y} color={colors.hex()}>
               <CardContainer>
                 {milestoneSplit(row.description).map(bullet => {
-                  return <BulletPoint key={bullet} text={bullet} />;
+                  return <Milestone key={bullet} text={bullet} />;
                 })}
               </CardContainer>
             </Container>
@@ -69,15 +66,3 @@ export const Grid: React.SFC<{
     </ScrollView>
   );
 };
-
-const BulletPoint: React.SFC<{ text: string }> = ({ text }) => {
-  return (
-    <CardText>
-      &bull; &nbsp;
-      {text}
-    </CardText>
-  );
-};
-
-// const Container: React.SFC<{ key: number; color: string;}>
-// colorForTopic(col.milestones.length, x, y)

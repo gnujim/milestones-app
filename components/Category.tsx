@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { Constants } from 'expo';
+import { colorForTopic } from '../Utils';
 
 const CatContainer = styled.View`
   position: absolute;
@@ -12,22 +13,29 @@ const CatContainer = styled.View`
   /* height: 30%; */
   /* align-items: center; */
   /* justify-content: center; */
-  border: 1px red;
 `;
 
 const Cat = styled.Text`
   /* background-color: #fffa; */
   /* background: #fffa; */
-  font-family: 'playfair-display-bold';
-  font-size: 22px;
+  font-family: 'averia-serif-libre';
+  font-size: 26px;
   padding: 8px;
   overflow: hidden;
+`;
+const Test = styled.View`
+  background: black;
+  border-radius: 1px;
+  height: 2px;
+  width: 40%;
+  margin: auto;
 `;
 
 export const Category: React.SFC<{ category: string }> = ({ category }) => {
   return (
     <CatContainer>
       <Cat>{category}</Cat>
+      <Test />
     </CatContainer>
   );
 };
