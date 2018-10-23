@@ -33,11 +33,7 @@ export default class App extends React.Component {
     await Font.loadAsync({
       'playfair-display': require('./assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf'),
       'playfair-display-bold': require('./assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf'),
-      dosis: require('./assets/fonts/Dosis/Dosis-Regular.ttf'),
       'source-serif-pro': require('./assets/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf'),
-      lancelot: require('./assets/fonts/Lancelot/Lancelot-Regular.ttf'),
-      quicksand: require('./assets/fonts/Quicksand/Quicksand-Regular.ttf'),
-      'averia-serif-libre': require('./assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf'),
     });
 
     this.setState({ fontLoaded: true });
