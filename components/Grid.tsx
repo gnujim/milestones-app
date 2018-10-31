@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text, ScrollView, Dimensions } from 'react-native';
+import { ScrollView, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
-import chroma from 'chroma-js';
 
 import { colorForTopic, milestoneSplit } from '../Utils';
 import { CategoryType } from '../App';
@@ -19,7 +18,6 @@ const Container = styled.View<{ color: string }>`
 
 const CardContainer = styled.View`
   background-color: #fdfdfd;
-  /* box-shadow: 0px 0px 5px #fdfdfd; */
   border: 2px black;
   border-radius: 5px;
   height: 40%;

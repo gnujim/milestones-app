@@ -29,7 +29,7 @@ export const colorForTopic = (count: number, index: number, y: number) => {
   const colors = chroma
     .scale(colorPairs[index])
     .mode('lab')
-    .colors(count);
+    .colors(count + 2);
 
   return chroma(colors[y]);
 };

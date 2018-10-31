@@ -4,18 +4,12 @@ import { Constants } from 'expo';
 
 const AgeContainer = styled.View`
   position: absolute;
-  /* top: ${Constants.statusBarHeight + 64}; */
-  bottom: ${Constants.statusBarHeight + 100};
-  /* left: 0;
-  right: 0; */
+  bottom: ${Constants.statusBarHeight + 50};
   max-width: 100%;
   align-self: center;
-  /* height: 20%; */
-  /* align-items: center; */
-  /* justify-content: center; */
 `;
 
-const Test = styled.View`
+const Line = styled.View`
   background: black;
   border-radius: 1px;
   height: 2px;
@@ -24,8 +18,6 @@ const Test = styled.View`
 `;
 
 const Cat = styled.Text`
-  /* background-color: #fffa; */
-  /* background: #fffa; */
   font-family: 'averia-serif-libre';
   font-size: 24px;
   padding: 8px;
@@ -35,7 +27,7 @@ const Cat = styled.Text`
 export const Age: React.SFC<{ age: string }> = ({ age }) => {
   return (
     <AgeContainer>
-      <Test />
+      <Line />
       <Cat>{age}</Cat>
     </AgeContainer>
   );
