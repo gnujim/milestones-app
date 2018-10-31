@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { Dimensions, Modal, Text, TouchableHighlight } from 'react-native';
+import { Dimensions } from 'react-native';
 import { Font } from 'expo';
 import styled from 'styled-components/native';
-import { createStackNavigator } from 'react-navigation';
-import { Constants } from 'expo';
 
 import devData from './devMilestones.json';
 import { Grid } from './components/Grid';
@@ -11,6 +9,7 @@ import { Category } from './components/Category';
 import { Age } from './components/Age';
 import { calculateAge } from './Utils';
 import { InfoModal } from './components/InfoModal';
+import { InfoButton, InfoIcon } from './components/InfoButton';
 
 export type CategoryType = {
   category: string;
@@ -21,32 +20,6 @@ const data: CategoryType[] = devData;
 
 const Screen = styled.View`
   flex: 1;
-`;
-
-// const Info = styled.View`
-//   position: absolute;
-//   top: ${Constants.statusBarHeight + 10};
-//   height: 200px;
-//   z-index: 2;
-//   width: 80%;
-//   /* background: white; */
-// `;
-
-const OpenInfo = styled.TouchableHighlight`
-  background: white;
-  border-radius: 50%;
-  height: 30px;
-  position: absolute;
-  bottom: ${Constants.statusBarHeight + 20};
-  right: 40px;
-  align-self: center;
-  width: 30px;
-`;
-
-const OpenInfoIcon = styled.Text`
-  font-family: 'source-serif-pro';
-  font-size: 24px;
-  text-align: center;
 `;
 
 export default class App extends React.Component {
@@ -90,19 +63,13 @@ export default class App extends React.Component {
         <Grid state={this.state} updateState={this.updateState} />
         <Category category={this.state.data[this.state.x].category} />
         <Age age={calculateAge(parseInt(this.state.data[0].milestones[this.state.y].age))} />
-        <OpenInfo
+        <InfoButton
           onPress={() => {
             this.setModalVisible(true);
           }}>
-          <OpenInfoIcon>i</OpenInfoIcon>
-        </OpenInfo>
+          <InfoIcon>i</InfoIcon>
+        </InfoButton>
       </Screen>
     ) : null;
   }
 }
-
-// const RootStack = createStackNavigator({
-//   Info: {
-//     screen: Info,
-//   },
-// });
