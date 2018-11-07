@@ -9,13 +9,14 @@ const InfoBackground = styled.View`
   background: #ffb468;
   /* padding: 20px; */
   align-items: center;
+  justify-content: space-evenly;
 `;
 
 const Title = styled.Text`
   font-family: 'averia-serif-libre';
   font-size: 24px;
   text-align: center;
-  margin-top: ${Constants.statusBarHeight + 50};
+  /* margin-top: ${Constants.statusBarHeight + 50}; */
 `;
 
 const InfoContainer = styled.View`
@@ -26,10 +27,12 @@ const InfoContainer = styled.View`
   width: 80%;
   justify-content: center;
   padding: 12px;
+  /* margin-top: 20px; */
 `;
 
 const InfoText = styled.Text`
   font-family: 'source-serif-pro';
+  text-align: center;
 `;
 
 export const InfoModal: React.SFC<{
@@ -41,7 +44,13 @@ export const InfoModal: React.SFC<{
       <InfoBackground>
         <Title style={{ alignSelf: 'center' }}>Developmental Milestones App</Title>
         <InfoContainer>
-          <InfoText />
+          <InfoText>
+            This app is based on the SNAPSHOTS* DEVELOPMENTAL MILESTONES chart. {'\n\n'}© Compiled
+            by Dr. Debbi Andrews, Division Director, 2009. {'\n\n'}
+            Amended by D. Andrews and C. Dosman, August 2014. {'\n\n'}
+            *Milestone ages approximate the 50th percentile. {'\n\n\n'}
+            Developed by Mijung Lee
+          </InfoText>
         </InfoContainer>
       </InfoBackground>
       <InfoButton

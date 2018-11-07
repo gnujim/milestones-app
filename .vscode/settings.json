@@ -4,27 +4,6 @@
   "editor.renderWhitespace": "boundary",
   "typescript.tsdk": "node_modules/typescript/lib",
   "search.exclude": {
-    "**/*.js": {
-      "when": "$(basename).ts"
-    },
-    "**/*?.js": {
-      "when": "$(basename).tsx"
-    },
-    "**/*.js.map": {
-      "when": "$(basename)"
-    },
     "**/node_modules": true
-  },
-  "files.exclude": {
-    "**/*.js": {
-      "when": "$(basename).ts"
-    },
-    "**/*?.js": {
-      "when": "$(basename).tsx"
-    },
-    "**/*.js.map": {
-      "when": "$(basename)"
-    },
-    "node_modules": false
   }
 }
