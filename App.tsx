@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, StatusBar } from 'react-native';
 import { Font } from 'expo';
 import styled from 'styled-components/native';
 
@@ -59,6 +59,7 @@ export default class App extends React.Component {
   render() {
     return this.state.fontLoaded ? (
       <Screen>
+        <StatusBar barStyle="dark-content" />
         <InfoModal state={this.state} setModalVisible={this.setModalVisible} />
         <Grid state={this.state} updateState={this.updateState} />
         <Category category={this.state.data[this.state.x].category} />

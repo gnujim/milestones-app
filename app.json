@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "developmental-milestones-app",
-    "description": "This project is really great.",
+    "name": "Milestones",
+    "description": "Snapshots Developmental Milestones Chart App",
     "slug": "developmental-milestones-app",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -19,7 +19,7 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.gnujim.milestones"
     }
   }

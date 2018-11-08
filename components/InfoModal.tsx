@@ -48,6 +48,7 @@ export const InfoModal: React.SFC<{
             This app is based on the SNAPSHOTS* DEVELOPMENTAL MILESTONES chart. {'\n\n'}© Compiled
             by Dr. Debbi Andrews, Division Director, 2009. {'\n\n'}
             Amended by D. Andrews and C. Dosman, August 2014. {'\n\n'}
+            http://www.pedscases.com/developmental-milestones {'\n\n'}
             *Milestone ages approximate the 50th percentile. {'\n\n\n'}
             Developed by Mijung Lee
           </InfoText>
