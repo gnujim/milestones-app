@@ -47,7 +47,7 @@ export default class App extends React.Component {
   }
 
   private updateState = (x: number, y: number) => {
-    const dimensions = Dimensions.get('screen');
+    const dimensions = Dimensions.get('window');
     const { width, height } = dimensions;
 
     this.setState({
